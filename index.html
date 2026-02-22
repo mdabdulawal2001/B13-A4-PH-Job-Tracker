@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Application Tracker</title>
+    <!-- tailwind and daisyUI cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome cdn -->
+    <script
+      src="https://kit.fontawesome.com/c6b3ba4e95.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="bg-[#F8FAFC]">
+    <!-- header section -->
+    <header class="py-10 max-w-[1200px] w-11/12 mx-auto">
+      <div class="mb-8">
+        <h1 class="text-2xl md:text-4xl font-bold">Job Application Tracker</h1>
+      </div>
+      <!-- cards -->
+      <!-- cards container -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <!-- card 1 -->
+        <div class="bg-white py-5 pl-5 rounded-2xl shadow">
+          <p class="font-bold text-3xl">Total</p>
+          <p class="font-bold text-3xl">0</p>
+        </div>
+        <!-- card 2 -->
+        <div class="bg-white py-5 pl-5 rounded-2xl shadow">
+          <p class="font-bold text-3xl">Interview</p>
+          <p class="text-green-600 font-bold text-3xl">0</p>
+        </div>
+        <!-- card 3 -->
+        <div class="bg-white py-5 pl-5 rounded-2xl shadow">
+          <p class="font-bold text-3xl">Rejected</p>
+          <p class="text-red-600 font-bold text-3xl">0</p>
+        </div>
+      </div>
+    </header>
+    <!-- main section -->
+    <main class="max-w-[1200px] w-11/12 mx-auto">
+      <!-- title part -->
+      <div class="flex justify-between items-center mb-4">
+        <p class="text-2xl font-bold">Available Jobs</p>
+        <p class="text-2xl font-bold"><span>0</span> jobs</p>
+      </div>
+      <!-- dashboard buttons -->
+      <div class="space-x-6 mb-8">
+        <button class="btn text-white bg-[#3B82F6]">All</button>
+        <button class="btn text-black">Interview</button>
+        <button class="btn text-black">Rejected</button>
+      </div>
+      <!-- cards part -->
+      <!-- cards container -->
+      <div>
+        <!-- card 1 -->
+        <div class="mx-auto mb-8 p-4 shadow rounded-2xl bg-white">
+          <div class="p-4 relative">
+            <div class="flex justify-between items-start">
+              <div>
+                <h2 class="text-[#1a365d] text-xl font-bold">
+                  Mobile First Corp
+                </h2>
+                <p class="text-slate-500 text-lg">React Native Developer</p>
+              </div>
+
+              <button
+                class="text-slate-300 border border-slate-200 rounded-full p-1.5 hover:bg-gray-50 transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="mt-4 flex items-center gap-2 text-slate-500 text-sm">
+              <span>Remote</span>
+              <span>•</span>
+              <span>Full-time</span>
+              <span>•</span>
+              <span>$130,000 - $175,000</span>
+            </div>
+
+            <!-- status -->
+            <div class="mt-4">
+              <span
+                class="bg-[#f0f7ff] text-[#1e40af] text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider"
+              >
+                Not Applied
+              </span>
+            </div>
+
+            <p class="mt-4 text-slate-600 text-sm leading-relaxed">
+              Build cross-platform mobile applications using React Native. Work
+              on products used by millions of users worldwide.
+            </p>
+            <!-- two buttons -->
+            <div class="mt-6 flex gap-3">
+              <!-- interview button -->
+              <button
+                class="border border-emerald-400 text-emerald-500 px-4 py-2 rounded-md text-sm font-semibold uppercase hover:bg-emerald-400 transition-colors"
+              >
+                Interview
+              </button>
+              <!-- rejected button -->
+              <button
+                class="border border-red-400 text-red-500 px-4 py-2 rounded-md text-sm font-semibold uppercase hover:bg-red-400 transition-colors"
+              >
+                Rejected
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- card 2 -->
+        <div class="mx-auto mb-8 p-4 shadow rounded-2xl bg-white">
+          <div class="p-4 relative">
+            <div class="flex justify-between items-start">
+              <div>
+                <h2 class="text-[#1a365d] text-xl font-bold">
+                  Mobile First Corp
+                </h2>
+                <p class="text-slate-500 text-lg">React Native Developer</p>
+              </div>
+              <button
+                class="text-slate-300 border border-slate-200 rounded-full p-1.5 hover:bg-gray-50 transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-4 flex items-center gap-2 text-slate-500 text-sm">
+              <span>Remote</span><span>•</span><span>Full-time</span
+              ><span>•</span><span>$130,000 - $175,000</span>
+            </div>
+            <div class="mt-4">
+              <span
+                class="bg-[#f0f7ff] text-[#1e40af] text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider"
+                >Not Applied</span
+              >
+            </div>
+            <p class="mt-4 text-slate-600 text-sm leading-relaxed">
+              Build cross-platform mobile applications using React Native. Work
+              on products used by millions of users worldwide.
+            </p>
+            <div class="mt-6 flex gap-3">
+              <button
+                class="border border-emerald-400 text-emerald-500 px-4 py-2 rounded-md text-sm font-semibold uppercase hover:bg-emerald-400 transition-colors"
+              >
+                Interview
+              </button>
+              <button
+                class="border border-red-400 text-red-500 px-4 py-2 rounded-md text-sm font-semibold uppercase hover:bg-red-400 transition-colors"
+              >
+                Rejected
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- card 3 -->
+        <div class="mx-auto mb-8 p-4 shadow rounded-2xl bg-white">
+          <div class="p-4 relative">
+            <div class="flex justify-between items-start">
+              <div>
+                <h2 class="text-[#1a365d] text-xl font-bold">TechSphere Inc</h2>
+                <p class="text-slate-500 text-lg">Senior Frontend Engineer</p>
+              </div>
+              <button
+                class="text-slate-300 border border-slate-200 rounded-full p-1.5 hover:bg-gray-50 transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-4 flex items-center gap-2 text-slate-500 text-sm">
+              <span>Hybrid</span><span>•</span><span>Full-time</span
+              ><span>•</span><span>$140,000 - $180,000</span>
+            </div>
+            <div class="mt-4">
+              <span
+                class="bg-[#f0f7ff] text-[#1e40af] text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider"
+                >Not Applied</span
+              >
+            </div>
+            <p class="mt-4 text-slate-600 text-sm leading-relaxed">
+              Lead the development of our next-generation web dashboard using
+              React and Tailwind CSS. Focus on performance and accessibility.
+            </p>
+            <div class="mt-6 flex gap-3">
+              <button
+                class="border border-emerald-400 text-emerald-500 px-4 py-2 rounded-md text-sm font-semibold uppercase hover:bg-emerald-400 transition-colors"
+              >
+                Interview
+              </button>
+              <button
+                class="border border-red-400 text-red-500 px-4 py-2 rounded-md text-sm font-semibold uppercase hover:bg-red-400 transition-colors"
+              >
+                Rejected
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- card 4 -->
+        <div class="mx-auto mb-8 p-4 shadow rounded-2xl bg-white">
+          <div class="p-4 relative">
+            <div class="flex justify-between items-start">
+              <div>
+                <h2 class="text-[#1a365d] text-xl font-bold">
+                  Global Data Solutions
+                </h2>
+                <p class="text-slate-500 text-lg">
+                  Backend Developer (Node.js)
+                </p>
+              </div>
+              <button
+                class="text-slate-300 border border-slate-200 rounded-full p-1.5 hover:bg-gray-50 transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-4 flex items-center gap-2 text-slate-500 text-sm">
+              <span>Remote</span><span>•</span><span>Contract</span
+              ><span>•</span><span>$90,000 - $120,000</span>
+            </div>
+            <div class="mt-4">
+              <span
+                class="bg-[#f0f7ff] text-[#1e40af] text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider"
+                >Not Applied</span
+              >
+            </div>
+            <p class="mt-4 text-slate-600 text-sm leading-relaxed">
+              Build and maintain scalable APIs for our enterprise data analytics
+              platform. Experience with PostgreSQL and Redis is a plus.
+            </p>
+            <div class="mt-6 flex gap-3">
+              <button
+                class="border border-emerald-400 text-emerald-500 px-4 py-2 rounded-md text-sm font-semibold uppercase hover:bg-emerald-400 transition-colors"
+              >
+                Interview
+              </button>
+              <button
+                class="border border-red-400 text-red-500 px-4 py-2 rounded-md text-sm font-semibold uppercase hover:bg-red-400 transition-colors"
+              >
+                Rejected
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- card 5 -->
+        <div class="mx-auto mb-8 p-4 shadow rounded-2xl bg-white">
+          <div class="p-4 relative">
+            <div class="flex justify-between items-start">
+              <div>
+                <h2 class="text-[#1a365d] text-xl font-bold">
+                  Creative Flow Studio
+                </h2>
+                <p class="text-slate-500 text-lg">UI/UX Designer</p>
+              </div>
+              <button
+                class="text-slate-300 border border-slate-200 rounded-full p-1.5 hover:bg-gray-50 transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-4 flex items-center gap-2 text-slate-500 text-sm">
+              <span>On-site</span><span>•</span><span>Full-time</span
+              ><span>•</span><span>$110,000 - $150,000</span>
+            </div>
+            <div class="mt-4">
+              <span
+                class="bg-[#f0f7ff] text-[#1e40af] text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider"
+                >Not Applied</span
+              >
+            </div>
+            <p class="mt-4 text-slate-600 text-sm leading-relaxed">
+              Craft beautiful user journeys and interfaces for our award-winning
+              mobile applications. Proficiency in Figma is mandatory.
+            </p>
+            <div class="mt-6 flex gap-3">
+              <button
+                class="border border-emerald-400 text-emerald-500 px-4 py-2 rounded-md text-sm font-semibold uppercase hover:bg-emerald-400 transition-colors"
+              >
+                Interview
+              </button>
+              <button
+                class="border border-red-400 text-red-500 px-4 py-2 rounded-md text-sm font-semibold uppercase hover:bg-red-400 transition-colors"
+              >
+                Rejected
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- card 6 -->
+        <div class="mx-auto mb-8 p-4 shadow rounded-2xl bg-white">
+          <div class="p-4 relative">
+            <div class="flex justify-between items-start">
+              <div>
+                <h2 class="text-[#1a365d] text-xl font-bold">
+                  SecureBridge Systems
+                </h2>
+                <p class="text-slate-500 text-lg">Cybersecurity Engineer</p>
+              </div>
+              <button
+                class="text-slate-300 border border-slate-200 rounded-full p-1.5 hover:bg-gray-50 transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-4 flex items-center gap-2 text-slate-500 text-sm">
+              <span>Remote</span><span>•</span><span>Full-time</span
+              ><span>•</span><span>$150,000 - $200,000</span>
+            </div>
+            <div class="mt-4">
+              <span
+                class="bg-[#f0f7ff] text-[#1e40af] text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider"
+                >Not Applied</span
+              >
+            </div>
+            <p class="mt-4 text-slate-600 text-sm leading-relaxed">
+              Identify vulnerabilities and implement security protocols for our
+              cloud infrastructure. Experience with AWS security is required.
+            </p>
+            <div class="mt-6 flex gap-3">
+              <button
+                class="border border-emerald-400 text-emerald-500 px-4 py-2 rounded-md text-sm font-semibold uppercase hover:bg-emerald-400 transition-colors"
+              >
+                Interview
+              </button>
+              <button
+                class="border border-red-400 text-red-500 px-4 py-2 rounded-md text-sm font-semibold uppercase hover:bg-red-400 transition-colors"
+              >
+                Rejected
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- card 7 -->
+        <div class="mx-auto mb-8 p-4 shadow rounded-2xl bg-white">
+          <div class="p-4 relative">
+            <div class="flex justify-between items-start">
+              <div>
+                <h2 class="text-[#1a365d] text-xl font-bold">AI Labs Ltd</h2>
+                <p class="text-slate-500 text-lg">Machine Learning Engineer</p>
+              </div>
+              <button
+                class="text-slate-300 border border-slate-200 rounded-full p-1.5 hover:bg-gray-50 transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-4 flex items-center gap-2 text-slate-500 text-sm">
+              <span>Hybrid</span><span>•</span><span>Full-time</span
+              ><span>•</span><span>$160,000 - $210,000</span>
+            </div>
+            <div class="mt-4">
+              <span
+                class="bg-[#f0f7ff] text-[#1e40af] text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider"
+                >Not Applied</span
+              >
+            </div>
+            <p class="mt-4 text-slate-600 text-sm leading-relaxed">
+              Develop and deploy NLP models for our customer support automation.
+              Must be proficient in Python and PyTorch.
+            </p>
+            <div class="mt-6 flex gap-3">
+              <button
+                class="border border-emerald-400 text-emerald-500 px-4 py-2 rounded-md text-sm font-semibold uppercase hover:bg-emerald-400 transition-colors"
+              >
+                Interview
+              </button>
+              <button
+                class="border border-red-400 text-red-500 px-4 py-2 rounded-md text-sm font-semibold uppercase hover:bg-red-400 transition-colors"
+              >
+                Rejected
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- card 8 -->
+        <div class="mx-auto mb-8 p-4 shadow rounded-2xl bg-white">
+          <div class="p-4 relative">
+            <div class="flex justify-between items-start">
+              <div>
+                <h2 class="text-[#1a365d] text-xl font-bold">FinTrack Inc</h2>
+                <p class="text-slate-500 text-lg">Full Stack Developer</p>
+              </div>
+              <button
+                class="text-slate-300 border border-slate-200 rounded-full p-1.5 hover:bg-gray-50 transition-colors"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-4 flex items-center gap-2 text-slate-500 text-sm">
+              <span>Remote</span><span>•</span><span>Full-time</span
+              ><span>•</span><span>$120,000 - $160,000</span>
+            </div>
+            <div class="mt-4">
+              <span
+                class="bg-[#f0f7ff] text-[#1e40af] text-xs font-bold px-3 py-1.5 rounded uppercase tracking-wider"
+                >Not Applied</span
+              >
+            </div>
+            <p class="mt-4 text-slate-600 text-sm leading-relaxed">
+              Build and scale financial monitoring tools using Next.js and
+              Prisma. Focus on creating seamless user experiences.
+            </p>
+            <div class="mt-6 flex gap-3">
+              <button
+                class="border border-emerald-400 text-emerald-500 px-4 py-2 rounded-md text-sm font-semibold uppercase hover:bg-emerald-400 transition-colors"
+              >
+                Interview
+              </button>
+              <button
+                class="border border-red-400 text-red-500 px-4 py-2 rounded-md text-sm font-semibold uppercase hover:bg-red-400 transition-colors"
+              >
+                Rejected
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
