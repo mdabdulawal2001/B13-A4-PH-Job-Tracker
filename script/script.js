@@ -11,6 +11,9 @@ let jobs = [
 ];
 
 let currentTab = "all";
+const ofWrapper = document.getElementById("of-wrapper");
+const currentCountSpan = document.getElementById("current-count");
+const emptyMessage = document.getElementById("empty-message");
 
 // loop all cards
 document.querySelectorAll(".job-card").forEach((card) => {
@@ -62,19 +65,51 @@ document.getElementById("rejected-btn").addEventListener("click", function () {
 
 // card show/hide
 function renderCards(tab) {
+  currentTab = tab;
+
+  let visibleCount = 0;
+
   document.querySelectorAll(".job-card").forEach((card) => {
     const id = Number(card.dataset.id);
     const job = jobs.find((j) => j.id === id);
 
-    if (tab === "all" || job.status === tab) {
+    if (tab === "all") {
       card.style.display = "block";
+      emptyMessage.classList.add("hidden");
+      return;
+    }
+
+    if (job.status === tab) {
+      card.style.display = "block";
+      visibleCount++;
     } else {
       card.style.display = "none";
     }
+
+    // show/hide empty message for interview and rejected tab
+    if (tab === "interview" || tab === "rejected") {
+      if (visibleCount === 0) {
+        emptyMessage.classList.remove("hidden");
+      } else {
+        emptyMessage.classList.add("hidden");
+      }
+    }
   });
+
+  // available job count for interview and rejected tab
+  if (tab === "interview" || tab === "rejected") {
+    ofWrapper.classList.remove("hidden");
+    currentCountSpan.innerText = visibleCount;
+    totalCountText.innerText = jobs.length;
+  } else {
+    ofWrapper.classList.add("hidden");
+  }
 }
 
 // dashboard counters update
+const total = jobs.length;
+document.getElementById("total-count").innerText = total;
+document.getElementById("available-job-count").innerText = total;
 function updateDashboard() {
   const total = jobs.length;
   const interview = jobs.filter((j) => j.status === "interview").length;
@@ -83,6 +118,7 @@ function updateDashboard() {
   document.getElementById("total-count").innerText = total;
   document.getElementById("interview-count").innerText = interview;
   document.getElementById("rejected-count").innerText = rejected;
+  document.getElementById("available-job-count").innerText = total;
 }
 
 // button style toggle

@@ -50,7 +50,12 @@
       <!-- title part -->
       <div class="flex justify-between items-center mb-4">
         <p class="text-2xl font-bold">Available Jobs</p>
-        <p class="text-2xl font-bold"><span>0</span> jobs</p>
+        <p class="text-2xl font-bold">
+          <span id="of-wrapper" class="hidden"> 
+            <span id="current-count"> 0 </span>
+            <span> of </span>
+          </span>
+          <span id="available-job-count">0</span> jobs</p>
       </div>
       <!-- dashboard buttons part-->
       <div class="space-x-6 mb-8">
@@ -77,8 +82,17 @@
         </button>
       </div>
 
-      <!-- filtered card -->
-      <section id="filtered-section"></section>
+      <!-- no jobs message -->
+       <!-- container -->
+       <div id="empty-message" class="hidden h-[400px] flex flex-col justify-center items-center mx-auto mb-8 p-4 shadow rounded-2xl bg-white">
+        <!-- image -->
+         <div><img src="./jobs.png" alt=""></div>
+         <!-- text -->
+          <div>
+            <p class="text-3xl font-bold text-center mb-4">No jobs available</p>
+            <p class="text-[#64748B]">Check back soon for new job opportunities</p>
+          </div>
+       </div>
 
       <!-- jobs cards part -->
       <!-- cards container -->
