@@ -20,35 +20,33 @@
   <body class="bg-[#F8FAFC]">
     <!-- header section -->
     <header class="py-10 max-w-[1200px] w-11/12 mx-auto">
-      <div class="mb-8">
+      <div class="mb-8 text-center md:text-left">
         <h1 class="text-2xl md:text-4xl font-bold">Job Application Tracker</h1>
       </div>
       <!-- header cards part-->
       <!-- cards container -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="text-center md:text-left grid grid-cols-3 gap-4">
         <!-- card 1 -->
-        <div class="bg-white py-5 pl-5 rounded-2xl shadow">
-          <p class="font-bold text-3xl">Total</p>
+        <div class="bg-white py-5 md:pl-5 rounded-2xl shadow">
+          <p class="font-bold text-2xl md:text-3xl">Total</p>
           <p id="total-count" class="font-bold text-3xl">0</p>
         </div>
         <!-- card 2 -->
-        <div class="bg-white py-5 pl-5 rounded-2xl shadow">
-          <p class="font-bold text-3xl">Interview</p>
+        <div class="bg-white py-5 md:pl-5 rounded-2xl shadow">
+          <p class="font-bold text-2xl md:text-3xl">Interview</p>
           <p id="interview-count" class="text-green-600 font-bold text-3xl">
             0
           </p>
         </div>
         <!-- card 3 -->
-        <div class="bg-white py-5 pl-5 rounded-2xl shadow">
-          <p class="font-bold text-3xl">Rejected</p>
+        <div class="bg-white py-5 md:pl-5 rounded-2xl shadow">
+          <p class="font-bold text-2xl md:text-3xl">Rejected</p>
           <p id="rejected-count" class="text-red-600 font-bold text-3xl">0</p>
         </div>
       </div>
-    </header>
-    <!-- main section -->
-    <main class="max-w-[1200px] w-11/12 mx-auto">
-      <!-- title part -->
-      <div class="flex justify-between items-center mb-4">
+
+            <!-- title part -->
+      <div class="my-10 flex justify-between items-center mb-4">
         <p class="text-2xl font-bold">Available Jobs</p>
         <p class="text-2xl font-bold">
           <span id="of-wrapper" class="hidden"> 
@@ -58,7 +56,7 @@
           <span id="available-job-count">0</span> jobs</p>
       </div>
       <!-- dashboard buttons part-->
-      <div class="space-x-6 mb-8">
+      <div class="space-x-5 flex justify-center md:justify-start">
         <button
           onclick="toggleStyle('all-btn')"
           id="all-btn"
@@ -81,6 +79,9 @@
           Rejected
         </button>
       </div>
+    </header>
+    <!-- main section -->
+    <main class="max-w-[1200px] w-11/12 mx-auto">
 
       <!-- no jobs message -->
        <!-- container -->
