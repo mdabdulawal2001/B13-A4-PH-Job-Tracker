@@ -13,22 +13,105 @@ let jobs = [
 let currentTab = "all";
 
 // loop all cards
-document.querySelectorAll(".job-card").forEach(card => {
+document.querySelectorAll(".job-card").forEach((card) => {
   const id = Number(card.dataset.id); // get id from card
 
   const interviewBtn = card.querySelector(".card-interview-btn");
   const rejectedBtn = card.querySelector(".card-rejected-btn");
   const statusText = card.querySelector(".status-text");
 
-  // click in interviewBtn
+  // click on interviewBtn
   interviewBtn.addEventListener("click", function () {
-    const job = jobs.find(j => j.id === id);
+    const job = jobs.find((j) => j.id === id);
     job.status = "interview";
     statusText.innerText = "Interview";
     // console.log(job);
-    
-    
-  })
-  
-  
-})
+    renderCards(currentTab);
+    updateDashboard();
+  });
+
+  // click on rejectedBtn
+  rejectedBtn.addEventListener("click", function () {
+    const job = jobs.find((j) => j.id === id);
+    job.status = "rejected";
+    statusText.innerText = "Rejected";
+    // console.log(job);
+    renderCards(currentTab);
+    updateDashboard();
+  });
+});
+
+// click dashboard buttons
+document.getElementById("all-btn").addEventListener("click", function () {
+  currentTab = "all";
+  renderCards(currentTab);
+  toggleStyle("all-btn");
+});
+
+document.getElementById("interview-btn").addEventListener("click", function () {
+  currentTab = "interview";
+  renderCards(currentTab);
+  toggleStyle("interview-btn");
+});
+
+document.getElementById("rejected-btn").addEventListener("click", function () {
+  currentTab = "rejected";
+  renderCards(currentTab);
+  toggleStyle("rejected-btn");
+});
+
+// card show/hide
+function renderCards(tab) {
+  document.querySelectorAll(".job-card").forEach((card) => {
+    const id = Number(card.dataset.id);
+    const job = jobs.find((j) => j.id === id);
+
+    if (tab === "all" || job.status === tab) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+
+// dashboard counters update
+function updateDashboard() {
+  const total = jobs.length;
+  const interview = jobs.filter((j) => j.status === "interview").length;
+  const rejected = jobs.filter((j) => j.status === "rejected").length;
+
+  document.getElementById("total-count").innerText = total;
+  document.getElementById("interview-count").innerText = interview;
+  document.getElementById("rejected-count").innerText = rejected;
+}
+
+// button style toggle
+function toggleStyle(activeId) {
+  const buttons = ["all-btn", "interview-btn", "rejected-btn"];
+  buttons.forEach((id) => {
+    const btn = document.getElementById(id);
+    if (id === activeId) {
+      btn.classList.add("bg-blue-500", "text-white");
+      btn.classList.remove("bg-white", "text-black");
+    } else {
+      btn.classList.remove("bg-blue-500", "text-white");
+      btn.classList.add("bg-white", "text-black");
+    }
+  });
+}
+
+// delete card
+document.querySelectorAll(".job-card").forEach((card) => {
+  const id = Number(card.dataset.id);
+  const deleteBtn = card.querySelector(".delete-btn");
+
+  deleteBtn.addEventListener("click", function () {
+    // remove from jobs
+    jobs = jobs.filter((j) => j.id !== id);
+
+    // remove from dom
+    card.remove();
+
+    updateDashboard();
+  });
+});
