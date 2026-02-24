@@ -1,4 +1,4 @@
-// cards array of object
+// array of object for cards
 let jobs = [
   { id: 1, status: "all" },
   { id: 2, status: "all" },
