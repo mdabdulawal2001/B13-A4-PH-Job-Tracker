@@ -11,8 +11,11 @@ let jobs = [
 ];
 
 let currentTab = "all";
+// right of 8 jobs part
 const ofWrapper = document.getElementById("of-wrapper");
 const currentCountSpan = document.getElementById("current-count");
+
+// empty message for interview and rejected tab
 const emptyMessage = document.getElementById("empty-message");
 
 // loop all cards
@@ -23,7 +26,8 @@ document.querySelectorAll(".job-card").forEach((card) => {
   const rejectedBtn = card.querySelector(".card-rejected-btn");
   const statusText = card.querySelector(".status-text");
 
-  // click on interviewBtn
+  // two buttons of card
+  // click on interviewBtn in card
   interviewBtn.addEventListener("click", function () {
     const job = jobs.find((j) => j.id === id);
     job.status = "interview";
@@ -33,7 +37,7 @@ document.querySelectorAll(".job-card").forEach((card) => {
     updateDashboard();
   });
 
-  // click on rejectedBtn
+  // click on rejectedBtn in card
   rejectedBtn.addEventListener("click", function () {
     const job = jobs.find((j) => j.id === id);
     job.status = "rejected";
@@ -44,19 +48,23 @@ document.querySelectorAll(".job-card").forEach((card) => {
   });
 });
 
-// click dashboard buttons
-document.getElementById("all-btn").addEventListener("click", function () {
+// click on dashboard buttons
+// all
+document.getElementById("all-btn").addEventListener("click", 
+  function () {
   currentTab = "all";
   renderCards(currentTab);
   toggleStyle("all-btn");
 });
 
+// interview
 document.getElementById("interview-btn").addEventListener("click", function () {
   currentTab = "interview";
   renderCards(currentTab);
   toggleStyle("interview-btn");
 });
 
+// rejected
 document.getElementById("rejected-btn").addEventListener("click", function () {
   currentTab = "rejected";
   renderCards(currentTab);
@@ -66,7 +74,6 @@ document.getElementById("rejected-btn").addEventListener("click", function () {
 // card show/hide
 function renderCards(tab) {
   currentTab = tab;
-
   let visibleCount = 0;
 
   document.querySelectorAll(".job-card").forEach((card) => {
@@ -90,6 +97,7 @@ function renderCards(tab) {
     if (tab === "interview" || tab === "rejected") {
       if (visibleCount === 0) {
         emptyMessage.classList.remove("hidden");
+        emptyMessage.classList.add("flex");
       } else {
         emptyMessage.classList.add("hidden");
       }
