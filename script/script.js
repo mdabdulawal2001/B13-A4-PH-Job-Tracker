@@ -12,7 +12,7 @@ let jobs = [
 
 let currentTab = "all";
 
-// right of 8 jobs part
+// 8 jobs part
 const ofWrapper = document.getElementById("of-wrapper");
 const currentCountSpan = document.getElementById("current-count");
 
@@ -47,7 +47,7 @@ function renderCards(tab) {
     const id = Number(card.dataset.id);
     const job = jobs.find((j) => j.id === id);
 
-    if(!job) {
+    if (!job) {
       card.style.display = "none";
       return;
     }
@@ -96,7 +96,7 @@ function updateDashboard() {
   document.getElementById("available-job-count").innerText = total;
 }
 
-// button style toggle
+// button toggle style
 function toggleStyle(activeId) {
   const buttons = ["all-btn", "interview-btn", "rejected-btn"];
   buttons.forEach((id) => {
@@ -154,7 +154,6 @@ document.querySelectorAll(".job-card").forEach((card) => {
 
 // click on dashboard buttons
 // all
-
 document.getElementById("all-btn").addEventListener("click", function () {
   currentTab = "all";
   renderCards(currentTab);
