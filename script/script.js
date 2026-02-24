@@ -47,6 +47,11 @@ function renderCards(tab) {
     const id = Number(card.dataset.id);
     const job = jobs.find((j) => j.id === id);
 
+    if(!job) {
+      card.style.display = "none";
+      return;
+    }
+
     if (tab === "all") {
       card.style.display = "block";
       emptyMessage.classList.add("hidden");
