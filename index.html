@@ -45,15 +45,16 @@
         </div>
       </div>
 
-            <!-- title part -->
+      <!-- title part -->
       <div class="my-10 flex justify-between items-center mb-4">
         <p class="text-2xl font-bold">Available Jobs</p>
         <p class="text-2xl font-bold">
-          <span id="of-wrapper" class="hidden"> 
+          <span id="of-wrapper" class="hidden">
             <span id="current-count"> 0 </span>
             <span> of </span>
           </span>
-          <span id="available-job-count">0</span> jobs</p>
+          <span id="available-job-count">0</span> jobs
+        </p>
       </div>
       <!-- dashboard buttons part-->
       <div class="space-x-5 flex justify-center md:justify-start">
@@ -82,18 +83,22 @@
     </header>
     <!-- main section -->
     <main class="max-w-[1200px] w-11/12 mx-auto">
-
       <!-- no jobs message -->
-       <!-- container -->
-       <div id="empty-message" class="hidden h-[400px] flex-col justify-center items-center mx-auto mb-8 p-4 shadow rounded-2xl bg-white">
+      <!-- container -->
+      <div
+        id="empty-message"
+        class="hidden h-[400px] flex-col justify-center items-center mx-auto mb-8 p-4 shadow rounded-2xl bg-white"
+      >
         <!-- image -->
-         <div><img src="./jobs.png" alt=""></div>
-         <!-- text -->
-          <div>
-            <p class="text-3xl font-bold text-center mb-4">No jobs available</p>
-            <p class="text-[#64748B]">Check back soon for new job opportunities</p>
-          </div>
-       </div>
+        <div><img src="./jobs.png" alt="" /></div>
+        <!-- text -->
+        <div>
+          <p class="text-3xl font-bold text-center mb-4">No jobs available</p>
+          <p class="text-[#64748B]">
+            Check back soon for new job opportunities
+          </p>
+        </div>
+      </div>
 
       <!-- jobs cards part -->
       <!-- cards container -->
@@ -115,7 +120,7 @@
               </div>
 
               <button
-                 class="delete-btn text-slate-400 border border-slate-400 rounded-full p-1.5 hover:bg-gray-300 transition-colors"
+                class="delete-btn text-slate-400 border border-slate-400 rounded-full p-1.5 hover:bg-gray-300 transition-colors"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
