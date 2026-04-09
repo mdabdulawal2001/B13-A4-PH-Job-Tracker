@@ -87,5 +87,5 @@ Follow these steps to set up the project on your local machine:
 ---
 
 <p align="center">
-Developed with ❤️ by <b>Md Abdul Awal Toha</b>
+Developed with ❤️ by <b>MD. ABDUL AWAL TOHA</b>
 </p>
