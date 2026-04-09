@@ -35,3 +35,11 @@ Job Application Tracker is a fully responsive web application designed to help j
 - **JavaScript (ES6+):** Implemented core logic using modern Arrow Functions and DOM manipulation to handle real-world functionality.
 
 ---
+
+### 📸 Screenshots 
+
+<img width="1565" height="831" alt="Screenshot 2026-04-09 212246" src="https://github.com/user-attachments/assets/99e46bbd-c1a5-4e0a-8079-bb124096a91e" />
+
+<img width="1636" height="837" alt="Screenshot 2026-04-09 212334" src="https://github.com/user-attachments/assets/022e8e93-91f9-4da9-8214-91a1b7e4e51c" />
+
+---
