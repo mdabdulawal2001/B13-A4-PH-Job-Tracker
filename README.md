@@ -84,3 +84,8 @@ Follow these steps to set up the project on your local machine:
    ```bash
    cd B13-A4-PH-Job-Tracker
    # Simply open index.html in your browser or use Live Server extension in VS Code.
+---
+
+<p align="center">
+Developed with ❤️ by <b>Md Abdul Awal Toha</b>
+</p>
