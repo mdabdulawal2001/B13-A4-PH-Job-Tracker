@@ -1,68 +1,37 @@
-Answers to 5 Questions
+# 💼 Job Application Tracker
 
+Job Application Tracker is a fully responsive web application designed to help job seekers manage their application statuses efficiently. This tool provides a clear overview of the application journey with real-time updates and an intuitive interface.
 
-1. What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
+<p align="center">
+  <a href="https://job-application-tracker-by-toha.netlify.app/" target="_blank">
+    <img src="https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=netlify" alt="Live Demo" />
+  </a>
+  <a href="https://github.com/mdabdulawal2001/B13-A4-PH-Job-Tracker" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-Repo-blue?style=for-the-badge&logo=github" alt="GitHub Repo" />
+  </a>
+</p>
 
-Answer: 
+---
 
-getElementById --> Returns a single element by its id. Id must be unique.
+### 🚀 Key Features
 
-getElementsByClassName --> Returns a live HTMLCollection of all elements with a given class.
+- **🔄 Dynamic Status Management:** Mark applications as "Interview" or "Rejected" with instant UI updates.
+- **📊 Real-time Dashboard:** A smart dashboard that automatically updates application counts based on their current status.
+- **🔀 Smart Toggle:** Easily switch between different application states with a single click.
+- **📑 Tab-based Filtering:** Organized system to filter and track jobs based on specific categories.
+- **🗑️ Instant Deletion:** Remove applications seamlessly; the UI and dashboard statistics update immediately.
+- **📱 Fully Responsive:** Optimized for all screen sizes using Tailwind CSS.
 
-querySelector --> Returns the first element matching a CSS selector.
+---
 
-querySelectorAll --> Returns a static NodeList of all elements matching a CSS selector.
+### 🛠️ Technologies Used
 
+<p align="left">
+  <img src="https://skillicons.dev/icons?i=html,css,tailwind,js" />
+</p>
 
+- **HTML5:** Semantic structure for a clean web layout.
+- **Tailwind CSS & DaisyUI:** Rapid styling and responsive design components.
+- **JavaScript (ES6+):** Implemented core logic using modern Arrow Functions and DOM manipulation to handle real-world functionality.
 
-2. How do you create and insert a new element into the DOM?
-
-Answer:
-
-To add a new element to the DOM, follow three steps:
-
-    1. Create a new element
-    const div = document.createElement("div");
-
-    2. Add content or attributes
-    div.innerText = "Hello World";
-    div.setAttribute("class", "myDiv");
-
-    3. Insert into the DOM
-    document.body.appendChild(div);
-
-We can also use insertBefore to place it at a specific position.
-
-
-
-3. What is Event Bubbling? And how does it work?
-
-Answer: 
-
-Event bubbling is when an event starts from the target element and then propagates upward through its parent elements.
-
-Example: Clicking a button triggers its event first, then the parent, then the grandparent.
-
-
-
-4. What is Event Delegation in JavaScript? Why is it useful?
-
-Answer: 
-
-Event delegation is attaching a single event listener to a parent element to handle events on its child elements.
-
-Benefits:
-
-    Avoid multiple listeners on each child.
-    Works with dynamically added children.
-
-
-5. What is the difference between preventDefault() and stopPropagation() methods?
-
-Answer: 
-
-preventDefault() --> Stops the browser’s default action.
-Example: Prevent a form from submitting or a link from navigating.
-
-stopPropagation() --> Stops the event from bubbling or capturing.
-Example: Parent elements won’t receive the event when this is called.
+---
